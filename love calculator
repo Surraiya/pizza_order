@@ -1,0 +1,28 @@
+# 🚨  👇
+To work out the love score between two people:
+
+Take both people's names and check for the number of times the letters in the word TRUE occurs. 
+
+Then check for the number of times the letters in the word LOVE occurs. 
+
+Then combine these numbers to make a 2 digit number.
+# 🚨 👆
+
+#code is below this line 👇
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is your partner's name? \n")
+
+combine_name = name1 + name2
+lower_combine_name= combine_name.lower()
+total_true = lower_combine_name.count("t") + lower_combine_name.count("r") + lower_combine_name.count("u") + lower_combine_name.count("e")
+
+total_love = lower_combine_name.count("l") + lower_combine_name.count("o") + lower_combine_name.count("v") + lower_combine_name.count("e")
+
+love_score = total_true*10 + total_love
+if love_score< 40:
+    print(f"your love score is {love_score}. Dude! do you even love each other?")
+elif 40<=love_score<85:
+    print(f"your love score is {love_score}. You guys are alright together!")
+else: print(f"your love score is {love_score}. Congooooo!!!! You guys are soul mate!")
+
