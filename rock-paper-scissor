@@ -1,0 +1,29 @@
+import random
+
+print("Welcome to rock paper scissor game")
+print("Rules:\n1.Rock wins against scissors.\n2.Scissors win against paper.\n3.Paper wins against rock.")
+rock = "👊"
+paper = "✋"
+scissor = "✌"
+game = [rock, paper, scissor]
+option = int(input("Type 0 for rock, 1 for paper, 2 for scissor:"))
+if option > 2 or option < 0:
+  print("please choose within 0,1 and 2.")
+else: 
+  print(f"You: {game[option]}")
+  c = random.randint(0,2)
+  print(f"Computer: {game[c]}")
+  if option == 0 and c == 2:
+    print("Congooo!! You win.")
+  elif option == 1 and c == 0:
+    print("Congooo!! You win.")
+  elif option == 2 and c == 1:
+    print("Congooo!! You win.")
+  elif option == 0 and c == 1:
+    print("Oppssss!! You loose.")
+  elif option == 1 and c ==2:
+    print("Oppssss!! You loose.")
+  elif option == 2 and c == 0:
+    print("Oppssss!! You loose.")
+  else: print("It's a draw!")
+
